@@ -1,4 +1,4 @@
-﻿/* SystemCrasher works from Windows XP to Windows 11, all versions, either 32 - bit or 64 - bit.For some reason, it does not work on Windows XP 64 - bit(it will trigger an error message.
+﻿/* SystemCrasher works from Windows XP to Windows 11, all versions, either 32-bit or 64-bit.For some reason, it does not work on Windows XP 64-bit.
  This does not harm your files or system files, but it can affect the system if you run this for a lot of times, maybe. Do not run it on your real machine if you do not want to cause any damage.
  
 <By Ali Diaa>*/
@@ -64,4 +64,5 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 	return 0;
 
 }
+
 
